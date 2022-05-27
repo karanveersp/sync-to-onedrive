@@ -9,10 +9,9 @@ let main args =
     let homeDir = $"C:\\Users\\{user}"
     let oneDriveSyncFolder = $"{homeDir}\\OneDrive\\Synced"
 
-    if (Directory.Exists(oneDriveSyncFolder) <> true) then
-        do
-            Directory.CreateDirectory(oneDriveSyncFolder)
-            |> ignore
+    if not (Directory.Exists(oneDriveSyncFolder)) then
+        Directory.CreateDirectory(oneDriveSyncFolder)
+        |> ignore
 
     let chocoExportFile = generateChocolateyExport (homeDir)
     chocoExportFile.Wait()

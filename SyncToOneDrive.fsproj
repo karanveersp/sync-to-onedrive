@@ -4,10 +4,11 @@
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Util.fs" />
+    <Compile Include="Helper.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="CliWrap" Version="3.4.4" />
+    <PackageReference Include="Utils.Fs" Version="1.0.0" />
   </ItemGroup>
 </Project>

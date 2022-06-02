@@ -1,6 +1,7 @@
 ﻿open System
 open System.IO
-open SyncFiles.Util
+open SyncFiles.Helper
+open Utils.Fs.File
 
 [<EntryPoint>]
 let main args =
